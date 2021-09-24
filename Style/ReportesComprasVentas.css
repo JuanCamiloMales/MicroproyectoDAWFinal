@@ -1,0 +1,47 @@
+.form-filter-estadisticas{
+    justify-content: flex-start;
+}
+
+.filters-statistics-cont-img{
+    display: flex;
+    justify-content: center;
+}
+
+.filters-statistics-cont-img>img{
+    width: 400px;
+}
+
+.filters-statistics-cont-fecha{
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.filters-statistics-fecha{
+    width: 180px;
+    padding-right: 20px;
+}
+
+@media only screen and (min-width: 600px) {
+
+    .filters-statistics-cont-img>img{
+        width: 500px;
+    }
+
+}
+
+@media only screen and (min-width: 768px) {
+
+    .filters-statistics-cont-img>img{
+        width: 600px;
+    }
+
+}
+
+@media only screen and (min-width: 992px) {
+
+    .filters-statistics-cont-img>img{
+        width: 700px;
+    }
+
+}

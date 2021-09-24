@@ -1,0 +1,177 @@
+.form{
+box-shadow: 0px 0px 30px rgb(189, 189, 189);
+}
+
+.padding-left{
+padding-left: 10px;
+}
+
+.table-type-2-cantidad-input{
+width: 40%;
+}
+
+.table-type-2-cantidad-center{
+justify-content: center;
+}
+
+.char{
+display: flex;
+flex-direction: column;
+}
+.title{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+}
+.subtitle{
+padding: 20px 10px;
+font-size: 20px;
+}
+.btn-aceptar{
+background-color: rgb(65, 146, 238);
+}
+.btn-aceptar:hover{
+background-color: rgb(65, 120, 238);
+}
+
+.btns{
+display: flex;
+width: 100%;
+justify-content: flex-end;   
+}
+
+.cliente{
+padding: 0px 15px;
+margin-bottom: 15px;
+}
+@media only screen and (min-width: 992px) {
+.cliente{
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: space-between;
+}
+.form-cont-input{
+        width: 40%;
+}
+}
+
+/* Ventana Modal */
+.modal-container{
+opacity: 0;
+visibility: hidden;
+position: fixed;
+z-index: 10;
+width: 100%;
+height: 100vh;
+top: 0;
+left: 0;
+background: rgba(0, 0, 0, 0.5);
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.modal-container-open{
+opacity: 1;
+visibility: visible;
+}
+
+.modal{
+width: 90%;
+display: flex;
+flex-direction: column;
+text-align: center;
+position: relative;
+transition: transform 1s;
+transform: translateY(0%);
+border-radius: 10px;
+}
+
+.modal-close{
+transform: translateY(-200%);
+}
+
+.modal-header{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+}
+.modal-title{
+font-family: 'Open Sans', sans-serif;
+padding: 10px 10px;
+font-size: 20px;
+}
+
+.button-modal-close{
+padding: 10px 10px;
+text-decoration: none;
+color: red;
+}
+
+.char-modal{
+box-shadow: none;
+}
+
+.header-char-type-1{
+display: flex;
+justify-content: space-between;
+}
+
+.form-agregar-producto{
+width: 100%;
+padding: 5px 20px;
+box-shadow: none;
+}
+
+.select-agregar-producto{
+width: 120px;
+padding: 5px;
+margin-right: 10px;
+}
+
+.text-agregar-producto{
+width: 40%;
+}
+
+.table-type-2-cont-opcion-agregar-center{
+justify-content: center;
+}
+
+.centrar-contenido{
+display: flex;
+justify-content: center;
+height: 50px;
+}
+
+.select-cantida{
+text-align: center;
+}
+
+.select-buttons{
+padding: 4px;
+display: flex;
+align-items: center;
+color: rgb(65, 146, 238);
+text-decoration: none;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+-webkit-appearance: none; 
+margin: 0;
+}
+
+.icon-agregar{
+font-size: 32px;
+}
+@media only screen and (min-width: 768px) {
+.modal{
+        width: 60%;
+}
+}
+
+@media only screen and (min-width: 992px) {
+.modal{
+        width: 50%;
+}
+}

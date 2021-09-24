@@ -1,0 +1,10 @@
+.perfil-usuario-footer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.form-cont-input{
+    width: 40%;
+}

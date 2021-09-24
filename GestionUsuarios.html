@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion de usuarios</title>
+    <link rel="stylesheet" href="Style/Componentes.css">
+    <link rel="stylesheet" href="Style/index.css">
+    <link rel="stylesheet" href="Style/GestionUsuarios.css">
+
+    <!-- Fuente -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+
+    <!-- Iconos -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="title"><span id="ButtonOpenNav" class="material-icons">reorder </span> ACME S.A.S</div>
+        <div id="cont-header-user" class="cont-header-user"></div>
+    </header>
+
+    <div class="cont-body">
+
+        <nav>
+            <div class="homepage nav-item" onclick="window.location.href='HomePage.html'"><span class="material-icons"> home </span> <p>Homepage</p> <span class="material-icons">arrow_right</span></div>
+
+            <div class="productos nav-item"> <span class="material-icons">widgets</span> <p>Productos</p><span class="material-icons arrow">expand_more</span></div>     
+                <div class="subitems nav-item" onclick="window.location.href='add-product.html'">Agregar productos <span class="material-icons">arrow_right</span></div>
+                <div class="subitems nav-item" onclick="window.location.href='buy-product.html'">Comprar productos <span class="material-icons">arrow_right</span></div>
+                <div class="subitems nav-item" onclick="window.location.href='GestionProductos.html'">Gestión productos <span class="material-icons">arrow_right</span></div>
+
+            <div class="cotizaciones nav-item"> <span class="material-icons">local_atm </span> <p>Cotizaciones</p>  <span class="material-icons arrow">expand_less</span> </div> 
+                <div class="subitems nav-item" onclick="window.location.href='List-price.html'">Lista de cotizaciones <span class="material-icons">arrow_right</span></div>
+                <div class="subitems nav-item" onclick="window.location.href='add-price.html'">Agregar cotización <span class="material-icons">arrow_right</span></div>
+
+            <div class="ordenes nav-item"> <span class="material-icons">receipt_long</span> <p>Ordenes de Trabajo</p> <span class="material-icons arrow">expand_more</span> </div>
+                <div class="subitems nav-item" onclick="window.location.href='List-work.html'">Lista ordenes de trabajo <span class="material-icons">arrow_right</span></div>
+                <div class="subitems nav-item" onclick="window.location.href='add-work.html'">Agregar ordenes de trabajo <span class="material-icons">arrow_right</span></div>
+
+            <div class="gestionUser nav-item" onclick="window.location.href='GestionUsuarios.html'"><span class="material-icons" >people_alt</span> <p>Gestión de Usuarios</p> <span class="material-icons arrow">arrow_right</span> </div>
+
+            <div class="reportes nav-item"> <span class="material-icons">stacked_bar_chart</span> <p>Reportes</p> <span class="material-icons arrow">expand_more</span> </div>      
+                <div class="subitems nav-item" onclick="window.location.href='ReportesInventario.html'">Inventario <span class="material-icons">arrow_right</span></div>
+                <div class="subitems nav-item" onclick="window.location.href='ReportesOrdenesTrabajo.html'">Ordenes de trabajo <span class="material-icons">arrow_right</span></div>
+                <div class="subitems nav-item" onclick="window.location.href='ReportesComprasVentas.html'">Ventas y compras<span class="material-icons">arrow_right</span></div>
+        </nav>
+    
+        <aside>
+            <div class="page-title"><span class="material-icons">people_alt</span> - Gestión de Usuarios</div>
+
+            <!-- Filtros -->
+        <div class="row">
+            <div class="char">
+                
+                <p class="char-title-gestion-usuarios"> Listado de usuarios </p>
+
+                <form class="form form-filter" action="">
+    
+                    <div class="left-filter">
+                        <!-- Entrada de select -->
+                        <div class="form-cont-input select-filter">
+                            <select class="form-input" placeholder="Por defecto" required>
+                                <option value="Todos">Todos</option>
+                                <option value="Opcion2">Cliente</option>
+                                <option value="Opcion4">Proveedor</option>
+                            </select>
+                        </div>
+    
+                        <!-- Entrada de texto -->
+                        <div class="form-cont-input text-filter">
+                            <input class="form-input" type="text" placeholder="Por defecto" required>
+                        </div>
+                    </div>
+    
+                    <div class="right-filter">
+                        <p class="form-name form-title-cantidad">Mostrar</p>
+                        <!-- Entrada de numero -->
+                        <div class="form-cont-input cantidad-filter">
+                            <input class="form-input" type="number" min="0" max="100" value="0" required>
+                        </div>
+                    </div>
+    
+                </form>
+
+                <div class="cont-table-type-2">
+                    <table class="table-type-2">
+                        <thead class="table-type-2-head">
+                            <tr>
+                                <!-- img-name-catalogo de producto -->
+                                <td class="table-type-2-head-td">Usuario</td>
+
+                                <!-- Direccion -->
+                                <td class="table-type-2-head-td">Dirección</td>
+
+                                <!-- Email -->
+                                <td class="table-type-2-head-td">Email</td>
+
+                                <!-- Telefono -->
+                                <td class="table-type-2-head-td">Teléfono</td>
+
+                                <!-- opciones -->
+                                <td class="table-type-2-head-td"><span class="material-icons">more_horiz</span></td>
+                            
+                            </tr>
+                        </thead>
+                        <tbody class="table-type-2-body">
+
+                            <tr class="table-type-2-body-tr">
+                                <!-- img-name-catalogo de producto -->
+                                <td class="table-type-2-body-td">
+                                    <div class="table-type-2-cont-producto">
+                                        <img class="table-type-2-producto-img" src="Imagenes/user.png" alt="...">
+                                        <div class="table-type-2-productos-cont-text">
+                                            <p class="table-type-2-producto-name"> Name </p>
+                                            <p class="table-type-2-producto-catalogo">Tipo de usuario</p>
+                                        </div>
+                                    </div>
+                                </td>
+
+                                <!-- Direccion -->
+                                <td class="table-type-2-body-td">
+                                    <div class="table-type-2-cantidad">
+                                        Cll 10 # 20-88
+                                    </div>
+                                </td>
+
+                                <!-- Email -->
+                                <td class="table-type-2-body-td">
+                                    <div class="table-type-2-cantidad">
+                                        user@gmail.com
+                                    </div>
+                                </td>
+
+                                <td class="table-type-2-body-td">
+                                    <div class="table-type-2-cantidad">
+                                        3255156589
+                                    </div>
+                                </td>
+
+                                <!-- Telefono -->
+                                <td class="table-type-2-body-td ">
+                                    <div class="table-type-2-cont-opcion">
+                                        <div class="table-type-2-cont-opcion-reed">
+                                            <div class="table-type-2-opcions-reed" onclick="window.location.href='VerUsuario.html'"><span class="material-icons">account_box</span></div>
+                                        </div>
+                                        <div class="table-type-2-cont-opcion-edit">
+                                            <div class="table-type-2-opcions-edit" onclick="window.location.href='EditarUsuario.html'"><span class="material-icons">edit</span></div>
+                                        </div>
+                                        <div class="table-type-2-cont-opcion-delete">
+                                            <div class="table-type-2-opcions-delete"><span class="material-icons">delete</span></div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr class="table-type-2-body-tr">
+
+                                <!-- img-name-catalogo de producto -->
+                                <td class="table-type-2-body-td">
+                                    <div class="table-type-2-cont-producto">
+                                        <img class="table-type-2-producto-img" src="Imagenes/user.png" alt="...">
+                                        <div class="table-type-2-productos-cont-text">
+                                            <p class="table-type-2-producto-name"> Name </p>
+                                            <p class="table-type-2-producto-catalogo">Tipo de usuario</p>
+                                        </div>
+                                    </div>
+                                </td>
+
+                                <!-- Direccion -->
+                                <td class="table-type-2-body-td">
+                                    <div class="table-type-2-cantidad">
+                                        Cll 10 # 20-88
+                                    </div>
+                                </td>
+
+                                <!-- Email -->
+                                <td class="table-type-2-body-td">
+                                    <div class="table-type-2-cantidad">
+                                        user@gmail.com
+                                    </div>
+                                </td>
+
+                                <td class="table-type-2-body-td">
+                                    <div class="table-type-2-cantidad">
+                                        3255156589
+                                    </div>
+                                </td>
+
+                                <!-- Telefono -->
+                                <td class="table-type-2-body-td ">
+                                    <div class="table-type-2-cont-opcion">
+                                        <div class="table-type-2-cont-opcion-reed">
+                                            <div class="table-type-2-opcions-reed" onclick="window.location.href='VerUsuario.html'"><span class="material-icons">account_box</span></div>
+                                        </div>
+                                        <div class="table-type-2-cont-opcion-edit">
+                                            <div class="table-type-2-opcions-edit" onclick="window.location.href='EditarUsuario.html'"><span class="material-icons">edit</span></div>
+                                        </div>
+                                        <div class="table-type-2-cont-opcion-delete">
+                                            <div class="table-type-2-opcions-delete"><span class="material-icons">delete</span></div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                    
+                </div>
+
+            </div>
+        </div>
+
+
+        </aside>
+    </div>
+
+    <script src="js/Sesion.js" ></script>
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+</body>
+</html>

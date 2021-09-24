@@ -1,0 +1,39 @@
+
+.form{
+    box-shadow: 0px 0px 30px rgb(189, 189, 189);
+}
+
+.perfil-usuario-footer{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.butoms-form{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+@media only screen and (min-width: 992px) {
+
+    .form-cont-input{
+        width: 30%;
+    }
+    .form{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .form-title{
+        width: 100%;
+    }
+    .img-add{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+
+}

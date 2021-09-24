@@ -1,0 +1,23 @@
+.char{
+    display: flex;
+    flex-direction: column;
+}
+
+.title{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.subtitle{
+    padding: 20px 10px;
+    font-size: 20px;
+}
+.btn-aceptar{
+    background-color: rgb(65, 146, 238);
+}
+.btn-aceptar:hover{
+    background-color: rgb(65, 120, 238);
+}
+
+

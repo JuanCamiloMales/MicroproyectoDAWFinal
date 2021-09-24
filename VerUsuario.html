@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informacion de Usuario</title>
+    <link rel="stylesheet" href="Style/Componentes.css">
+    <link rel="stylesheet" href="Style/index.css">
+    <link rel="stylesheet" href="Style/VerUsuario.css">
+
+    <!-- Fuente -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+
+    <!-- Iconos -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="title"> <span class="material-icons">reorder </span> ACME S.A.S</div>
+        <div id="cont-header-user" class="cont-header-user"></div>
+    </header>
+
+    <div class="cont-body">
+
+        <nav>
+            <div class="homepage nav-item" onclick="window.location.href='HomePage.html'"><span class="material-icons"> home </span> <p>Homepage</p> <span class="material-icons">arrow_right</span></div>
+
+            <div class="productos nav-item"> <span class="material-icons">widgets</span> <p>Productos</p><span class="material-icons arrow">expand_more</span></div>     
+                <div class="subitems nav-item" onclick="window.location.href='add-product.html'">Agregar productos <span class="material-icons">arrow_right</span></div>
+                <div class="subitems nav-item" onclick="window.location.href='buy-product.html'">Comprar productos <span class="material-icons">arrow_right</span></div>
+                <div class="subitems nav-item" onclick="window.location.href='GestionProductos.html'">Gestión productos <span class="material-icons">arrow_right</span></div>
+
+            <div class="cotizaciones nav-item"> <span class="material-icons">local_atm </span> <p>Cotizaciones</p>  <span class="material-icons arrow">expand_less</span> </div> 
+                <div class="subitems nav-item" onclick="window.location.href='List-price.html'">Lista de cotizaciones <span class="material-icons">arrow_right</span></div>
+                <div class="subitems nav-item" onclick="window.location.href='add-price.html'">Agregar cotización <span class="material-icons">arrow_right</span></div>
+
+            <div class="ordenes nav-item"> <span class="material-icons">receipt_long</span> <p>Ordenes de Trabajo</p> <span class="material-icons arrow">expand_more</span> </div>
+                <div class="subitems nav-item" onclick="window.location.href='List-work.html'">Lista ordenes de trabajo <span class="material-icons">arrow_right</span></div>
+                <div class="subitems nav-item" onclick="window.location.href='add-work.html'">Agregar ordenes de trabajo <span class="material-icons">arrow_right</span></div>
+
+            <div class="gestionUser nav-item" onclick="window.location.href='GestionUsuarios.html'"><span class="material-icons" >people_alt</span> <p>Gestión de Usuarios</p> <span class="material-icons arrow">arrow_right</span> </div>
+
+            <div class="reportes nav-item"> <span class="material-icons">stacked_bar_chart</span> <p>Reportes</p> <span class="material-icons arrow">expand_more</span> </div>      
+                <div class="subitems nav-item" onclick="window.location.href='ReportesInventario.html'">Inventario <span class="material-icons">arrow_right</span></div>
+                <div class="subitems nav-item" onclick="window.location.href='ReportesOrdenesTrabajo.html'">Ordenes de trabajo <span class="material-icons">arrow_right</span></div>
+                <div class="subitems nav-item" onclick="window.location.href='ReportesComprasVentas.html'">Ventas y compras<span class="material-icons">arrow_right</span></div>
+        </nav>
+    
+        <aside>
+            <div class="page-title"><span class="material-icons">people_alt</span> - Informacion de Usuario</div>
+
+            <div class="seccion-perfil-usuario">
+                <div class="perfil-usuario-header">
+                    <div class="perfil-usuario-portada">
+                        <div class="perfil-usuario-avatar">
+                            <img src="Imagenes/user.png" alt="img-avatar">
+                        </div>
+                    </div>
+                </div>
+                <div class="perfil-usuario-body">
+                    <div class="perfil-usuario-bio">
+                        <h3 class="titulo">Nombre</h3>
+                    </div>
+                    <div class="perfil-usuario-footer">
+                        <ul class="lista-datos">
+                            <li>
+                                <span class="material-icons">location_on</span> 
+                                <div class="perfil-cont-inf">
+                                    <p class="perfil-inf-title">Dirección:</p>
+                                    <p class="perfil-inf-result">Cll 10 # 22-88</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="material-icons">email</span>
+                                <div class="perfil-cont-inf">
+                                    <p class="perfil-inf-title">Email:</p>
+                                    <p class="perfil-inf-result">user@gmail.com</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="lista-datos">
+                            <li>
+                                <span class="material-icons">person_pin</span>
+                                <div class="perfil-cont-inf">
+                                    <p class="perfil-inf-title">Tipo de usuario:</p>
+                                    <p class="perfil-inf-result">Cliente</p>
+                                </div>
+                            </li>
+                            
+                            <li>
+                                <span class="material-icons">call</span>
+                                <div class="perfil-cont-inf">
+                                    <p class="perfil-inf-title">Telefono:</p>
+                                    <p class="perfil-inf-result">3225984587</p>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+        </aside>
+    </div>
+
+    <script src="js/Sesion.js" ></script>
+</body>
+</html>

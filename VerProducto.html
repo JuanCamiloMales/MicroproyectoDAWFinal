@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informacion de producto</title>
+    <link rel="stylesheet" href="Style/Componentes.css">
+    <link rel="stylesheet" href="Style/index.css">
+    <link rel="stylesheet" href="Style/VerProducto.css">
+
+    <!-- Fuente -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+
+    <!-- Iconos -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="title"> <span class="material-icons">reorder </span> ACME S.A.S</div>
+        <div id="cont-header-user" class="cont-header-user"></div>
+    </header>
+
+    <div class="cont-body">
+
+        <nav>
+            <div class="homepage nav-item" onclick="window.location.href='HomePage.html'"><span class="material-icons"> home </span> <p>Homepage</p> <span class="material-icons">arrow_right</span></div>
+
+            <div class="productos nav-item"> <span class="material-icons">widgets</span> <p>Productos</p><span class="material-icons arrow">expand_more</span></div>     
+                <div class="subitems nav-item" onclick="window.location.href='add-product.html'">Agregar productos <span class="material-icons">arrow_right</span></div>
+                <div class="subitems nav-item" onclick="window.location.href='buy-product.html'">Comprar productos <span class="material-icons">arrow_right</span></div>
+                <div class="subitems nav-item" onclick="window.location.href='GestionProductos.html'">Gestión productos <span class="material-icons">arrow_right</span></div>
+
+            <div class="cotizaciones nav-item"> <span class="material-icons">local_atm </span> <p>Cotizaciones</p>  <span class="material-icons arrow">expand_less</span> </div> 
+                <div class="subitems nav-item" onclick="window.location.href='List-price.html'">Lista de cotizaciones <span class="material-icons">arrow_right</span></div>
+                <div class="subitems nav-item" onclick="window.location.href='add-price.html'">Agregar cotización <span class="material-icons">arrow_right</span></div>
+
+            <div class="ordenes nav-item"> <span class="material-icons">receipt_long</span> <p>Ordenes de Trabajo</p> <span class="material-icons arrow">expand_more</span> </div>
+                <div class="subitems nav-item" onclick="window.location.href='List-work.html'">Lista ordenes de trabajo <span class="material-icons">arrow_right</span></div>
+                <div class="subitems nav-item" onclick="window.location.href='add-work.html'">Agregar ordenes de trabajo <span class="material-icons">arrow_right</span></div>
+
+            <div class="gestionUser nav-item" onclick="window.location.href='GestionUsuarios.html'"><span class="material-icons" >people_alt</span> <p>Gestión de Usuarios</p> <span class="material-icons arrow">arrow_right</span> </div>
+
+            <div class="reportes nav-item"> <span class="material-icons">stacked_bar_chart</span> <p>Reportes</p> <span class="material-icons arrow">expand_more</span> </div>      
+                <div class="subitems nav-item" onclick="window.location.href='ReportesInventario.html'">Inventario <span class="material-icons">arrow_right</span></div>
+                <div class="subitems nav-item" onclick="window.location.href='ReportesOrdenesTrabajo.html'">Ordenes de trabajo <span class="material-icons">arrow_right</span></div>
+                <div class="subitems nav-item" onclick="window.location.href='ReportesComprasVentas.html'">Ventas y compras<span class="material-icons">arrow_right</span></div>
+        </nav>
+    
+        <aside>
+            <div class="page-title"><span class="material-icons">widgets</span> - Informacion producto</div>
+
+            <div class="seccion-perfil-usuario">
+                <div class="perfil-usuario-header">
+                    <div class="perfil-usuario-portada">
+                        <div class="perfil-usuario-avatar">
+                            <img src="Imagenes/Transistor.png" alt="img-avatar">
+                            <button type="button" class="boton-avatar">
+                                <i class="far fa-image"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="perfil-usuario-body">
+                    <div class="perfil-usuario-bio">
+                        <h3 class="titulo">Nombre</h3>
+                        <p class="texto">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet nostrum, at dicta quos
+                            natus quaerat corporis ducimus, modi, in cupiditate officia? Nemo natus ex exercitationem
+                        </p>
+                    </div>
+                    <div class="perfil-usuario-footer">
+                        <ul class="lista-datos">
+                            <li>
+                                <span class="material-icons icon">fingerprint</span> 
+                                <div class="perfil-cont-inf">
+                                    <p class="perfil-inf-title">Codigo:</p>
+                                    <p class="perfil-inf-result">5245</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="material-icons">category</span>
+                                <div class="perfil-cont-inf">
+                                    <p class="perfil-inf-title">Categoria:</p>
+                                    <p class="perfil-inf-result">Electronico</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="material-icons">tag</span> 
+                                <div class="perfil-cont-inf">
+                                    <p class="perfil-inf-title">Cantidad:</p>
+                                    <p class="perfil-inf-result">500</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="material-icons">paid</span>
+                                <div class="perfil-cont-inf">
+                                    <p class="perfil-inf-title">Precio de entrada:</p>
+                                    <p class="perfil-inf-result">5245</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="material-icons">paid</span>
+                                <div class="perfil-cont-inf">
+                                    <p class="perfil-inf-title">Precio de salida:</p>
+                                    <p class="perfil-inf-result">5245</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="lista-datos">
+                            <li>
+                                <span class="material-icons">location_on</span>
+                                <div class="perfil-cont-inf">
+                                    <p class="perfil-inf-title">Ubicacion:</p>
+                                    <p class="perfil-inf-result">Vitrina</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="material-icons">redeem</span> 
+                                <div class="perfil-cont-inf">
+                                    <p class="perfil-inf-title">Presentacion:</p>
+                                    <p class="perfil-inf-result">Regalo</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="material-icons">tag</span>    
+                                <div class="perfil-cont-inf">
+                                    <p class="perfil-inf-title">Cantidad inicial disponible:</p>
+                                    <p class="perfil-inf-result">1000</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="material-icons">tag</span>    
+                                <div class="perfil-cont-inf">
+                                    <p class="perfil-inf-title">Cantidad mínima disponible:</p>
+                                    <p class="perfil-inf-result">200</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+        </aside>
+    </div>
+
+    <script src="js/Sesion.js" ></script>
+</body>
+</html>

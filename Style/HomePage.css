@@ -1,0 +1,66 @@
+
+.material-icons{
+    margin: 0px;
+}
+
+/* ==== Modificadores informacion registro home page (inf-update) ==== */
+
+.body-char-type-1{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.subtitle-inf-update{
+    color: #999;
+    font-size: 13px;
+}
+
+.descripcion-inf-update{
+    font-weight: 700;
+    font-size: 24px; 
+}
+
+.color-icon-product{
+    background: linear-gradient(60deg,#ffa726,#fb7000);
+}
+
+.color-icon-clientes{
+    background: linear-gradient(60deg,#ec407a,#d81b60);
+}
+
+.color-icon-proveedores{
+    background: linear-gradient(60deg,#66bb6a,#43a047);
+}
+
+.color-icon-catalogos{
+    background: linear-gradient(60deg,#26c6da,#00acc1);
+}
+
+.color-icon-catalogos{
+    background: linear-gradient(60deg,#26c6da,#00acc1);
+}
+
+
+/* Media Queries */
+@media only screen and (min-width: 768px) {
+
+    .cont-inf-update{
+        width: 48%;
+    }
+
+    .table-responsive{
+        width: 80%;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    
+    .cont-inf-update{
+        width: 23%;
+    }
+
+    .table-responsive{
+        width: 70%;
+    }
+}

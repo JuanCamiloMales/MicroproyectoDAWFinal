@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+aside{
+    width: 100%;
+}
+
+
+
+/* ----------- Style Login and Registration Animated ----------*/
+.signInUp__section{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.signInUp__container{
+    position: relative;
+    width: 800px;
+    height: 500px;
+    background-color: #fff;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+.signInUp{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.signInUp__containerImg{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    transition: 0.5s;
+}
+
+.signInUp__img{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.signInUp__containerForm{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.signInUp__form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.signInUp__title{
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.signInUp__input{
+    width: 100%;
+    padding: 10px;
+    background-color: #f5f5f5;
+    color: #333;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    outline: none;
+    box-shadow: none;
+    font-size: 14px;
+    margin: 8px;
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+
+.signInUp__input-Incorrect{
+    border: 1px solid rgb(255, 0, 0);
+}
+
+.signInUp__inputSubmit{
+    max-width: 100px;
+    background-color: #677eff;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.signInUp__message{
+    display: none;
+    align-items: center;
+    width: 250px;
+    margin-top: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 13px;
+}
+
+.signInUp__CorrectMessage-Active{
+    display: flex;
+    background-color: #77dd77;
+}
+
+.signInUp__ErrorMessage-Active{
+    display: flex;
+    background-color: #e73e49;
+}
+
+.signInUp__IconMessage{
+    padding-left: 5px;
+    padding-right: 8px;
+}
+
+@media (max-width: 991px){
+
+    .signInUp__container{
+        max-width: 400px;
+    }
+
+    .signInUp__containerImg{
+        display: none;
+    }
+
+    .signInUp__containerForm{
+        width: 100%;
+    }
+
+}

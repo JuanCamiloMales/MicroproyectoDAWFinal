@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordenes de trabajo ACME S.A.S</title>
+    <link rel="stylesheet" href="Style/Componentes.css">
+    <link rel="stylesheet" href="Style/index.css">
+    <link rel="stylesheet" href="Style/HomePage.css">
+    <link rel="stylesheet" href="Style/List-work.css">
+
+    <!-- Fuente -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+
+    <!-- Iconos -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="title"><span id="ButtonOpenNav" class="material-icons">reorder </span> ACME S.A.S</div>
+        <div id="cont-header-user" class="cont-header-user"></div>
+    </header>
+
+    <div class="cont-body">
+
+        <nav>
+            <div class="homepage nav-item" onclick="window.location.href='HomePage.html'"><span class="material-icons"> home </span> <p>Homepage</p> <span class="material-icons">arrow_right</span></div>
+
+            <div class="productos nav-item"> <span class="material-icons">widgets</span> <p>Productos</p><span class="material-icons arrow">expand_more</span></div>     
+                <div class="subitems nav-item" onclick="window.location.href='add-product.html'">Agregar productos <span class="material-icons">arrow_right</span></div>
+                <div class="subitems nav-item" onclick="window.location.href='buy-product.html'">Comprar productos <span class="material-icons">arrow_right</span></div>
+                <div class="subitems nav-item" onclick="window.location.href='GestionProductos.html'">Gestión productos <span class="material-icons">arrow_right</span></div>
+
+            <div class="cotizaciones nav-item"> <span class="material-icons">local_atm </span> <p>Cotizaciones</p>  <span class="material-icons arrow">expand_less</span> </div> 
+                <div class="subitems nav-item" onclick="window.location.href='List-price.html'">Lista de cotizaciones <span class="material-icons">arrow_right</span></div>
+                <div class="subitems nav-item" onclick="window.location.href='add-price.html'">Agregar cotización <span class="material-icons">arrow_right</span></div>
+
+            <div class="ordenes nav-item"> <span class="material-icons">receipt_long</span> <p>Ordenes de Trabajo</p> <span class="material-icons arrow">expand_more</span> </div>
+                <div class="subitems nav-item" onclick="window.location.href='List-work.html'">Lista ordenes de trabajo <span class="material-icons">arrow_right</span></div>
+                <div class="subitems nav-item" onclick="window.location.href='add-work.html'">Agregar ordenes de trabajo <span class="material-icons">arrow_right</span></div>
+
+            <div class="gestionUser nav-item" onclick="window.location.href='GestionUsuarios.html'"><span class="material-icons" >people_alt</span> <p>Gestión de Usuarios</p> <span class="material-icons arrow">arrow_right</span> </div>
+
+            <div class="reportes nav-item"> <span class="material-icons">stacked_bar_chart</span> <p>Reportes</p> <span class="material-icons arrow">expand_more</span> </div>      
+                <div class="subitems nav-item" onclick="window.location.href='ReportesInventario.html'">Inventario <span class="material-icons">arrow_right</span></div>
+                <div class="subitems nav-item" onclick="window.location.href='ReportesOrdenesTrabajo.html'">Ordenes de trabajo <span class="material-icons">arrow_right</span></div>
+                <div class="subitems nav-item" onclick="window.location.href='ReportesComprasVentas.html'">Ventas y compras<span class="material-icons">arrow_right</span></div>
+        </nav>
+    
+        <aside>
+            <div class="page-title"><span class="material-icons"> receipt_long </span> - Lista de ordenes de trabajo</div>
+
+            <!-- Filtros -->
+            <div class="row">
+                <form class="form form-filter" action="">
+
+                    <div class="left-filter">
+                        <!-- Entrada de select -->
+                        <div class="form-cont-input select-filter form-input-input">
+                            <select class="form-input" placeholder="Por defecto" required>
+                                <option value="Todos">Todos</option>
+                                <option value="Opcion2">Id</option>
+                                <option value="Opcion3">Id cliente</option>
+                            </select>
+                        </div>
+    
+                        <!-- Entrada de texto -->
+                        <div class="form-cont-input text-filter form-input-input">
+                            <input class="form-input" type="text" placeholder="Por defecto" required>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+    <!-- table-type-2 -->
+    <div class="row"> 
+        <div class="char">
+            <!-- Este es el codigo de la tabla -->
+            <div class="cont-table-type-2">
+                <table class="table-type-2">
+                    <thead class="table-type-2-head">
+                        <tr>
+                            <!-- img-name-catalogo de producto -->
+                            <td class="table-type-2-head-td">Operador</td>
+
+                            <!-- Descripcion -->
+                            <td class="table-type-2-head-td center-cod">Cliente</td>
+
+                            <!-- Cantidad minima -->
+                            <td class="table-type-2-head-td">Fecha</td>
+
+                            <!-- opciones -->
+                            <td class="table-type-2-head-td"><span class="material-icons">more_horiz</span></td>
+                        
+                        </tr>
+                    </thead>
+                    <tbody id="TablaProductos" class="table-type-2-body">
+
+                        <tr class="table-type-2-body-tr">
+                            <td class="table-type-2-body-td">
+                                    <div class="table-type-2-productos-cont-text">
+                                        <p class="table-type-2-producto-name">Name</p>
+                                        <p class="table-type-2-producto-catalogo">cc</p>
+                                    </div>
+                                
+                            </td>
+
+                            <!-- Codigo -->
+                            <td class="table-type-2-body-td">
+                                <div class="table-type-2-cantidad-minima center-cod">
+                                    Name
+                                </div>
+                            </td>
+
+                            <!-- Cantidad minima -->
+                            <td class="table-type-2-body-td">
+                                <div class="table-type-2-cantidad-minima">
+                                    DD/MM/AA
+                                </div>
+                            </td>
+
+                            <!-- Opciones -->
+                            <td class="table-type-2-body-td ">
+                                <div class="table-type-2-cont-opcion">
+                                    <div class="table-type-2-cont-opcion-reed">
+                                        <div class="table-type-2-opcions-reed"><span class="material-icons">account_box</span></div>
+                                    </div>
+                                    <div class="table-type-2-cont-opcion-edit">
+                                        <div class="table-type-2-opcions-edit"><span class="material-icons">edit</span></div>
+                                    </div>
+                                    <div class="table-type-2-cont-opcion-delete">
+                                        <div class="table-type-2-opcions-delete"><span class="material-icons">delete</span></div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                
+            </div>
+        </div>
+    </div>
+</aside>
+</div>
+
+    <script src="js/Sesion.js" ></script>
+    <script src="js/List-work.js" ></script>
+</body>
+</html>

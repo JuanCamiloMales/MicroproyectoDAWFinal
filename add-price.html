@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cotizaciones ACME S.A.S</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="Style/Componentes.css">
+    <link rel= 'stylesheet' href='Style/index.css'>
+    <link rel= 'stylesheet' href='Style/add-price.css'>
+
+</head>
+<body>
+
+    <header>
+        <div class="title"><span id="ButtonOpenNav" class="material-icons">reorder </span> ACME S.A.S</div>
+        <div id="cont-header-user" class="cont-header-user"></div>
+        
+    </header>
+
+    <div class="cont-body">
+
+        <nav>
+            <div class="homepage nav-item" onclick="window.location.href='HomePage.html'"><span class="material-icons"> home </span> <p>Homepage</p> <span class="material-icons">arrow_right</span></div>
+
+            <div class="productos nav-item"> <span class="material-icons">widgets</span> <p>Productos</p><span class="material-icons arrow">expand_more</span></div>     
+                <div class="subitems nav-item" onclick="window.location.href='add-product.html'">Agregar productos <span class="material-icons">arrow_right</span></div>
+                <div class="subitems nav-item" onclick="window.location.href='buy-product.html'">Comprar productos <span class="material-icons">arrow_right</span></div>
+                <div class="subitems nav-item" onclick="window.location.href='GestionProductos.html'">Gestión productos <span class="material-icons">arrow_right</span></div>
+
+            <div class="cotizaciones nav-item"> <span class="material-icons">local_atm </span> <p>Cotizaciones</p>  <span class="material-icons arrow">expand_less</span> </div> 
+                <div class="subitems nav-item" onclick="window.location.href='List-price.html'">Lista de cotizaciones <span class="material-icons">arrow_right</span></div>
+                <div class="subitems nav-item" onclick="window.location.href='add-price.html'">Agregar cotización <span class="material-icons">arrow_right</span></div>
+
+            <div class="ordenes nav-item"> <span class="material-icons">receipt_long</span> <p>Ordenes de Trabajo</p> <span class="material-icons arrow">expand_more</span> </div>
+                <div class="subitems nav-item" onclick="window.location.href='List-work.html'">Lista ordenes de trabajo <span class="material-icons">arrow_right</span></div>
+                <div class="subitems nav-item" onclick="window.location.href='add-work.html'">Agregar ordenes de trabajo <span class="material-icons">arrow_right</span></div>
+
+            <div class="gestionUser nav-item" onclick="window.location.href='GestionUsuarios.html'"><span class="material-icons" >people_alt</span> <p>Gestión de Usuarios</p> <span class="material-icons arrow">arrow_right</span> </div>
+
+            <div class="reportes nav-item"> <span class="material-icons">stacked_bar_chart</span> <p>Reportes</p> <span class="material-icons arrow">expand_more</span> </div>      
+                <div class="subitems nav-item" onclick="window.location.href='ReportesInventario.html'">Inventario <span class="material-icons">arrow_right</span></div>
+                <div class="subitems nav-item" onclick="window.location.href='ReportesOrdenesTrabajo.html'">Ordenes de trabajo <span class="material-icons">arrow_right</span></div>
+                <div class="subitems nav-item" onclick="window.location.href='ReportesComprasVentas.html'">Ventas y compras<span class="material-icons">arrow_right</span></div>
+        </nav> 
+        
+        <aside> 
+            <div class="page-title"><span class="material-icons">payments</span> - Agregar cotización</div>
+            
+            <div class="row"> <!-- table-type-2 -->
+                
+                <form class="form cliente" action="">
+                    <div class="form-cont-input ">
+                        <p class="form-name">Cliente</p>
+                        <div class="form-input-input">
+                            <input id="inputClientes" class="form-input padding-left" list="listClientes" type="text" placeholder="Ingrese nombre del cliente" required>
+                            <datalist id="listClientes">
+                                <!-- Se insertan los clientes mediante javascript -->
+                            </datalist>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="char">
+                    <div class="title">
+                        <p class="subtitle">Productos agregados</p>
+                        <a id="button-modal-open" href="#" class="btn-aceptar">Agregar</a>
+                    </div>
+
+                    <!-- Este es el codigo de la tabla -->
+                    <div class="cont-table-type-2">
+                        <table class="table-type-2">
+                            <thead class="table-type-2-head">
+                                <tr>
+                                    <!-- img-name-catalogo de producto -->
+                                    <td class="table-type-2-head-td">Producto</td>
+
+                                    <!-- Cantidad -->
+                                    <td class="table-type-2-head-td">Cantidad</td>
+
+                                    <!-- precio -->
+                                    <td class="table-type-2-head-td">Precio</td>
+
+                                    <!-- opciones -->
+                                    <td class="table-type-2-head-td"><span class="material-icons">more_horiz</span></td>
+                                </tr>
+                            </thead>
+                            <tbody id="table-carrito-productos" class="table-type-2-body">
+
+                                <!-- Mensaje de no se han agregado productos -->
+                                <tr>
+                                    <td></td>
+                                    <td class="table-type-2-body-td">
+                                        <div class="table-type-2-cantidad table-type-2-cantidad-center">
+                                            <p class="table-type-2-producto-name">No se han agregado productos</p>
+                                        </div>
+                                    </td>
+                                    <td></td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                        <!-- Este es el codigo de la tabla -->
+                        <div class="cont-table-type-2 size-table-modal">
+                            <table class="table-type-2">
+                                <thead class="table-type-2-head">
+                                    <tr class="table-type-2-head-tr-precio-total">
+                                        <!-- Cantidad -->
+                                        <td class="table-type-2-head-td table-type-2-head-td-precio-total">Total</td>
+
+                                        <!-- precio -->
+                                        <td id="Precio-total" class="table-type-2-head-td table-type-2-head-td-precio-total"></td>
+                                    </tr>
+                                </thead>
+                                <tbody class="table-type-2-body">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="btns" >
+                    <a id="button-register-cotizacion" href="#" class="btn btn-aceptar">Guardar cotizacion</a>
+                </div>
+
+            <!-- Ventana modal -->
+
+                <div id="modal-container" class="modal-container">
+                    <div id="modal" class="modal">
+
+
+                        <div class="row"> 
+                            <div class="cont-char-type-1">
+                                <div class="char char-modal">
+                                    <div class="header-char-type-1">
+                                        <div class="icon-char-type-1 modificador-color-icon">
+                                            <span class="material-icons">inventory_2</span>
+                                        </div>
+                                        <div class="cont-title-char-type-1">
+                                            <p class="title-char-type-1">Agregar producto</p>
+                                        </div>
+                                        <a id="button-modal-close" href="" class="button-modal-close material-icons">cancel</a>
+                                    </div>
+                                    <div class="body-char-type-1">
+                                
+                                        <form class="form form-agregar-producto" action="">
+                                            <div class="form-input-input select-agregar-producto">
+                                                <select id="select-filtro-productos" class="form-input" placeholder="Por defecto" required>
+                                                    <option value="Nombre">Nombre</option>
+                                                    <option value="Codigo">Codigo</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-input-input text-agregar-producto">
+                                                <input id="input-filtro-productos" class="form-input padding-left" type="text" placeholder="Ingrese un filtro" required>
+                                            </div>
+                                        </form>
+
+                                        <div class="cont-table-type-2">
+                                            <table class="table-type-2">
+                                                <thead class="table-type-2-head">
+                                                    <tr>
+                                                        <!-- img-name-catalogo de producto -->
+                                                        <td class="table-type-2-head-td">Producto</td>
+                                                        
+                                                        <!-- Cantidad -->
+                                                        <td class="table-type-2-head-td">Cantidad</td>
+
+                                                        <!-- precio -->
+                                                        <td class="table-type-2-head-td">Precio</td>
+                    
+                                                        <!-- opciones -->
+                                                        <td class="table-type-2-head-td"><span class="material-icons">more_horiz</span></td>
+                                                    
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="table-agragar-productos" class="table-type-2-body">
+                                                    <!-- Aqui se agregan los productos con javascript -->
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </div>
+    
+    <script src="js/Sesion.js" ></script>
+    <script src="js/add-price.js" ></script>
+</body>
+</html>

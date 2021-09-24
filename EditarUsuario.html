@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar informacion de usuario</title>
+    <link rel="stylesheet" href="Style/Componentes.css">
+    <link rel="stylesheet" href="Style/index.css">
+    <link rel="stylesheet" href="Style/EditarUsuario.css">
+
+    <!-- Fuente -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+
+    <!-- Iconos -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="title"><span id="ButtonOpenNav" class="material-icons">reorder </span> ACME S.A.S</div>
+        <div id="cont-header-user" class="cont-header-user"></div>
+    </header>
+
+    <div class="cont-body">
+
+        <nav>
+            <div class="homepage nav-item" onclick="window.location.href='HomePage.html'"><span class="material-icons"> home </span> <p>Homepage</p> <span class="material-icons">arrow_right</span></div>
+
+            <div class="productos nav-item"> <span class="material-icons">widgets</span> <p>Productos</p><span class="material-icons arrow">expand_more</span></div>     
+                <div class="subitems nav-item" onclick="window.location.href='add-product.html'">Agregar productos <span class="material-icons">arrow_right</span></div>
+                <div class="subitems nav-item" onclick="window.location.href='buy-product.html'">Comprar productos <span class="material-icons">arrow_right</span></div>
+                <div class="subitems nav-item" onclick="window.location.href='GestionProductos.html'">Gestión productos <span class="material-icons">arrow_right</span></div>
+
+            <div class="cotizaciones nav-item"> <span class="material-icons">local_atm </span> <p>Cotizaciones</p>  <span class="material-icons arrow">expand_less</span> </div> 
+                <div class="subitems nav-item" onclick="window.location.href='List-price.html'">Lista de cotizaciones <span class="material-icons">arrow_right</span></div>
+                <div class="subitems nav-item" onclick="window.location.href='add-price.html'">Agregar cotización <span class="material-icons">arrow_right</span></div>
+
+            <div class="ordenes nav-item"> <span class="material-icons">receipt_long</span> <p>Ordenes de Trabajo</p> <span class="material-icons arrow">expand_more</span> </div>
+                <div class="subitems nav-item" onclick="window.location.href='List-work.html'">Lista ordenes de trabajo <span class="material-icons">arrow_right</span></div>
+                <div class="subitems nav-item" onclick="window.location.href='add-work.html'">Agregar ordenes de trabajo <span class="material-icons">arrow_right</span></div>
+
+            <div class="gestionUser nav-item" onclick="window.location.href='GestionUsuarios.html'"><span class="material-icons" >people_alt</span> <p>Gestión de Usuarios</p> <span class="material-icons arrow">arrow_right</span> </div>
+
+            <div class="reportes nav-item"> <span class="material-icons">stacked_bar_chart</span> <p>Reportes</p> <span class="material-icons arrow">expand_more</span> </div>      
+                <div class="subitems nav-item" onclick="window.location.href='ReportesInventario.html'">Inventario <span class="material-icons">arrow_right</span></div>
+                <div class="subitems nav-item" onclick="window.location.href='ReportesOrdenesTrabajo.html'">Ordenes de trabajo <span class="material-icons">arrow_right</span></div>
+                <div class="subitems nav-item" onclick="window.location.href='ReportesComprasVentas.html'">Ventas y compras<span class="material-icons">arrow_right</span></div>
+        </nav>
+    
+        <aside>
+            <div class="page-title"><span class="material-icons">people_alt</span> - Editar usuario</div>
+
+            <form class="form form-edit-perfil" action="">
+
+                <div class="seccion-perfil-usuario">
+                    <div class="perfil-usuario-header">
+                        <div class="perfil-usuario-portada">
+                            <div class="perfil-usuario-avatar">
+                                <img src="Imagenes/user.png" alt="img-avatar">
+                                <button type="button" class="boton-avatar">
+                                    <i class="far fa-image"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="perfil-usuario-body">
+                        <div class="perfil-usuario-bio">
+                            <!-- Entrada de texto -->
+                            <div class="form-cont-input pa-0">
+                                <input class="form-input form-perfil-edit-name" value="Nombre" type="text" placeholder="Por defecto" required>
+                            </div>
+                        </div>
+                        <div class="perfil-usuario-footer">
+                            <ul class="lista-datos">
+                                <li>
+                                    <span class="material-icons">location_on</span>  
+                                    <div class="perfil-cont-inf">
+                                        <p class="perfil-inf-title">Dirección:</p>
+                                        <div class="form-cont-input form-perfil-cont-input">
+                                            <input class="form-input form-perfil-input" type="text" placeholder="Por defecto" required>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="material-icons">email</span>
+                                    <div class="perfil-cont-inf">
+                                        <p class="perfil-inf-title">Email:</p>
+                                        <div class="form-cont-input form-perfil-cont-input">
+                                            <input class="form-input form-perfil-input" type="text" placeholder="Por defecto" required>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul class="lista-datos">
+                                <li>
+                                    <span class="material-icons">person_pin</span>
+                                    <div class="perfil-cont-inf">
+                                        <p class="perfil-inf-title">Tipo de usuario:</p>
+                                        <select class="form-input form-perfil-input" placeholder="Por defecto" required>
+                                            <option value="Opcion1">Cliente</option>
+                                            <option value="Opcion2">Proveedor</option>
+                                        </select>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="material-icons">redeem</span> 
+                                    <div class="perfil-cont-inf">
+                                        <p class="perfil-inf-title">Presentacion:</p>
+                                        <div class="form-cont-input form-perfil-cont-input">
+                                            <input class="form-input form-perfil-input" type="text" placeholder="Por defecto" required>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="row row-perfil-edit-btn">
+                                <a href="GestionUsuarios.html" class="btn btn-aceptar">Aceptar</a>
+                                <a href="GestionUsuarios.html" class="btn btn-cancelar">Cancelar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+            </form>
+
+        </aside>
+    </div>
+
+    <script src="js/Sesion.js" ></script>
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+</body>
+</html>

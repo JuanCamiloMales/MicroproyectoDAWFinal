@@ -1,0 +1,190 @@
+{
+    "Clientes": [
+        {
+            "Id": "1",
+            "Nombre": "Juan",
+            "Apellido": "Gonzales",
+            "Direccion": "Calle 20 # 1-55",
+            "Email": "JuanGonzales@gmail.com",
+            "Telefono": "3125488789"
+        },
+        {
+            "Id": "2",
+            "Nombre": "Ana",
+            "Apellido": "Martinez",
+            "Direccion": "Carrera 15 # 10-85",
+            "Email": "AnaMartinez@gmail.com",
+            "Telefono": "3185462145"
+        }
+    ],
+    "Trabajadores": [
+        {
+            "Id": "1",
+            "Tipo": "Administrador",
+            "Usuario": "Marcos",
+            "Contraseña": "12345",
+            "Nombre": "Marcos",
+            "Direccion": "Calle 80 # 4-55",
+            "Email": "MarcosLopez@gmail.com",
+            "Telefono": "3181239945"
+        },
+        {
+            "Id": "2",
+            "Tipo": "Operador",
+            "Usuario": "Patricia",
+            "Contraseña": "12345",
+            "Nombre": "Patricia",
+            "Direccion": "Carrera 12 # 1-85",
+            "Email": "PatriciaCaisedo@gmail.com",
+            "Telefono": "3148559632"
+        }
+    ],
+    "Proveedores": [
+        {
+            "Id": "1",
+            "Nombre": "Pacho",
+            "Apellido": "Montes",
+            "Direccion": "Calle 20 # 1-55",
+            "Email": "PachoMontes@gmail.com",
+            "Telefono": "3125488789"
+        },
+        {
+            "Id": "2",
+            "Nombre": "Pedro",
+            "Apellido": "Losano",
+            "Direccion": "Carrera 15 # 10-85",
+            "Email": "PedroLosano@gmail.com",
+            "Telefono": "3185462145"
+        }
+    ],
+    "Productos": [
+        {
+            "Id": "1",
+            "Codigo": "1",
+            "Nombre": "Transistor",
+            "Categoria": "Electronica",
+            "Ubicacion": "Vitrina",
+            "Descripcion": "2N22222 transistor pnp",
+            "PrecioEntrada": "200",
+            "PrecioSalida": "500",
+            "Unidad": "500",
+            "Presentacion": "Caja",
+            "CantidadInicial": "1000",
+            "CantidadMinima": "100",
+            "Imagen": "Transistor.png",
+            "Id_Proveedor": "1"
+        },
+        {
+            "Id": "2",
+            "Codigo": "2",
+            "Nombre": "Condensador",
+            "Categoria": "Electronica",
+            "Ubicacion": "Bodega",
+            "Descripcion": "1uF condesandor ceramico",
+            "PrecioEntrada": "100",
+            "PrecioSalida": "200",
+            "Unidad": "800",
+            "Presentacion": "Caja",
+            "CantidadInicial": "2000",
+            "CantidadMinima": "100",
+            "Imagen": "Condensador.jpg",
+            "Id_Proveedor": "2"
+        },
+        {
+            "Id": "3",
+            "Codigo": "3",
+            "Nombre": "Resistencia",
+            "Categoria": "Electronica",
+            "Ubicacion": "Bodega",
+            "Descripcion": "10K ohm 10W",
+            "PrecioEntrada": "50",
+            "PrecioSalida": "100",
+            "Unidad": "300",
+            "Presentacion": "Bolsa",
+            "CantidadInicial": "5000",
+            "CantidadMinima": "100",
+            "Imagen": "Resistencia.png",
+            "Id_Proveedor": "1"
+        }
+    ],
+    "Compras": [
+        {
+            "Id": "1",
+            "Id_Trabajador": "1", 
+            "Fecha": "24/9/2021", 
+            "Productos": [
+                {
+                    "Id": "1",
+                    "Codigo": "1",
+                    "Nombre": "Transistor",
+                    "Categoria": "Electronica",
+                    "Ubicacion": "Vitrina",
+                    "Descripcion": "2N22222 transistor pnp",
+                    "PrecioEntrada": "200",
+                    "PrecioSalida": "500",
+                    "Unidad": "100",
+                    "Presentacion": "Caja",
+                    "CantidadInicial": "1000",
+                    "CantidadMinima": "100",
+                    "Imagen": "Transistor.png",
+                    "Id_Proveedor": "1",
+                    "Cantidad": "1"
+                }
+            ]
+        }
+    ],
+    "Cotizaciones": [
+        {
+            "Id": "1",
+            "Id_Cliente": "1",
+            "Id_Trabajador": "1", 
+            "Fecha": "24/9/2021", 
+            "Productos": [
+                {
+                    "Id": "1",
+                    "Codigo": "1",
+                    "Nombre": "Transistor",
+                    "Categoria": "Electronica",
+                    "Ubicacion": "Vitrina",
+                    "Descripcion": "2N22222 transistor pnp",
+                    "PrecioEntrada": "200",
+                    "PrecioSalida": "500",
+                    "Unidad": "100",
+                    "Presentacion": "Caja",
+                    "CantidadInicial": "1000",
+                    "CantidadMinima": "100",
+                    "Imagen": "Transistor.png",
+                    "Id_Proveedor": "1",
+                    "Cantidad": "1"
+                }
+            ]
+        }
+    ],
+    "OrdenesDeTrabajo": [
+        {
+            "Id": "1",
+            "Id_Cliente": "1",
+            "Id_Trabajador": "1", 
+            "Fecha": "24/9/2021", 
+            "Productos": [
+                {
+                    "Id": "1",
+                    "Codigo": "1",
+                    "Nombre": "Transistor",
+                    "Categoria": "Electronica",
+                    "Ubicacion": "Vitrina",
+                    "Descripcion": "2N22222 transistor pnp",
+                    "PrecioEntrada": "200",
+                    "PrecioSalida": "500",
+                    "Unidad": "100",
+                    "Presentacion": "Caja",
+                    "CantidadInicial": "1000",
+                    "CantidadMinima": "100",
+                    "Imagen": "Transistor.png",
+                    "Id_Proveedor": "1",
+                    "Cantidad": "1"
+                }
+            ]
+        }
+    ]
+}

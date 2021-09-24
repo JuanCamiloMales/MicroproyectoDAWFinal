@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesion</title>
+    
+    <!-- Iconos Material Icon -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="Style/Componentes.css">
+    <link rel= 'stylesheet' href='Style/index.css'>
+    <link rel="stylesheet" href="Style/InicioSesion.css">
+</head>
+<body>
+    
+    <header>
+        <div class="title"> ACME S.A.S</div>
+        <div id="cont-header-user" class="cont-header-user"></div>
+    </header>
+
+    <div class="signInUp__section">
+
+        <div class="signInUp__container">
+
+            <div class="signInUp signInUp__signIn">
+    
+                <div class="signInUp__containerForm">
+                    <form class="signInUp__form" action="">
+                        <h2 class="signInUp__title">Inicio de sesión</h2>
+                        <input id="input_usuario_Login" name="usuario" class="signInUp__input" type="text" placeholder="Usuario">
+                        <input id="input_password_Login" name="contraseña" class="signInUp__input" type="password" placeholder="Contraseña">
+                        <button id="button_submit_Login" class="signInUp__input signInUp__inputSubmit">Ingresar</button>
+                        <div id="message_Login_Error" class="signInUp__message">
+                            <span class="signInUp__IconMessage material-icons">error</span>
+                            <p id="message_Login_Error_Text"></p>
+                        </div>
+                        <div id="message_Login_Correct" class="signInUp__message">
+                            <span class="signInUp__IconMessage material-icons">check_circle</span>
+                            <p id="message_Login_Correct_Text"></p>
+                        </div>
+                    </form>
+                </div>
+                <div class="signInUp__containerImg"><img class="signInUp__img" src="Imagenes/InicioSesion.jpg" alt=""></div>
+    
+            </div>
+        </div>
+
+    </div>
+
+    <script src="JS/GuardarDatosLocalStorage.js"></script>
+    <script src="JS/InicioSesion.js"></script>
+</body>
+</html>
